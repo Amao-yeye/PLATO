@@ -1,0 +1,46 @@
+{
+  "total_image_frames": 3029,
+  "tracked_image_frames": 1694,
+  "image_frame_coverage": 0.5592604820072631,
+  "missing_image_runs": [
+    {
+      "start": 1779620758.8569164,
+      "end": 1779620760.9819186,
+      "frames": 86
+    },
+    {
+      "start": 1779620774.5319364,
+      "end": 1779620775.9319384,
+      "frames": 57
+    },
+    {
+      "start": 1779620777.2069395,
+      "end": 1779620777.2819395,
+      "frames": 4
+    },
+    {
+      "start": 1779620783.2569475,
+      "end": 1779620812.9319854,
+      "frames": 1188
+    }
+  ],
+  "vo_gaps": [
+    {
+      "start": 1779620758.8319163,
+      "end": 1779620761.0069194,
+      "duration": 2.1750030517578125
+    },
+    {
+      "start": 1779620774.5069363,
+      "end": 1779620775.9569385,
+      "duration": 1.4500021934509277
+    },
+    {
+      "start": 1779620777.1819394,
+      "end": 1779620777.3069394,
+      "duration": 0.125
+    }
+  ],
+  "map_ids_available": false,
+  "recovery_semantics": "gaps_only_not_verified_relocalization"
+}

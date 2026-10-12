@@ -1,0 +1,159 @@
+{
+  "sequence": "Train_006",
+  "clock": {
+    "input_domain": "mocap",
+    "output_domain": "sensor",
+    "mocap_query_offset_sec": 0.4,
+    "formula": "t_sensor = t_mocap - offset",
+    "offset_application_count": 1,
+    "validation": "legacy_coarse_vo_fit_not_independent_hardware_sync"
+  },
+  "gravity": {
+    "R_align": [
+      [
+        -0.09997384776747559,
+        0.4233683620504192,
+        -0.9004245997179946
+      ],
+      [
+        0.4233683620504192,
+        0.8370499713706423,
+        0.3465639557760616
+      ],
+      [
+        0.9004245997179946,
+        -0.3465639557760616,
+        -0.2629238763968333
+      ]
+    ],
+    "origin_mocap_world_xyz": [
+      -0.18531795865254252,
+      0.301957118850241,
+      1.8734458988107066
+    ],
+    "origin_sensor_timestamp": 1779618657.889417,
+    "valid_samples": 8648,
+    "mean_specific_force_before": [
+      8.634616923682367,
+      -3.323373215946675,
+      -2.5213071183165026
+    ],
+    "mean_specific_force_after": [
+      -1.5426480619668768e-16,
+      1.7462118397385945e-16,
+      9.589494696598313
+    ],
+    "gravity_world": [
+      0,
+      0,
+      -9.7879
+    ]
+  },
+  "quality_intervals": [
+    {
+      "start": 1779618731.427936,
+      "end": 1779618731.7896469,
+      "reason": "timestamp_gap"
+    },
+    {
+      "start": 1779618731.549647,
+      "end": 1779618731.7897308,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618731.549731,
+      "end": 1779618731.7897708,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618731.549771,
+      "end": 1779618731.7898078,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618731.549808,
+      "end": 1779618731.7898438,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618731.549844,
+      "end": 1779618731.7898757,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618731.549876,
+      "end": 1779618731.7899077,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618731.549908,
+      "end": 1779618731.7899427,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618731.549943,
+      "end": 1779618731.7899768,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618731.549977,
+      "end": 1779618731.7900257,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618731.550026,
+      "end": 1779618731.7900598,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618731.55006,
+      "end": 1779618731.7900927,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618731.550093,
+      "end": 1779618731.7901237,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618731.550124,
+      "end": 1779618731.790156,
+      "reason": "timestamp_burst"
+    }
+  ],
+  "calibration_window_audit": {
+    "eligible": true,
+    "reasons": [],
+    "source": "legacy_full_usable_vo_fit"
+  },
+  "spatial_source": "actual_legacy_T_M_I_preserved_not_recomposed",
+  "tmi_composition_translation_delta_m": 0.0032285840264041623,
+  "vo_duplicate_rows_removed": 0,
+  "original_gt_rows": 9244,
+  "gt_valid_rows": 8648,
+  "pseudo_bias_rows": 8963,
+  "pseudo_bias_status": "research_residual_not_hardware_bias_truth",
+  "quality_policy": {
+    "min_dt_sec": 0.001,
+    "max_dt_sec": 0.05,
+    "guard_sec": 0.12
+  },
+  "source_hashes": {
+    "Body_0.csv": "519c5e574eb776c38d6de394ff1741a24c6c0b7c41d763ead8d0902d3d458b81",
+    "Body_0.tum": "050dfffb9551771418ba2f101f88554e3db6239a1b649570497f6c319b5106db",
+    "Body_0.cmb": "a46f8ff77045485b700e5d1aa7177ce3c95e6055c86f91833e7195b61b49e900",
+    "T_M_I.yaml": "526881b5e358eac4ef3b726d7ad6febd1309421f0a7fa99fcf4c17e0e5c050bb",
+    "ATO/vo_imu_gravity_aligned.tum": "73581af729144e61801f03bd2f875803ba756668669c0b32675cf9218d4fe8bc"
+  },
+  "raw_topic_counts": {
+    "/davis_left/imu": 71952,
+    "/davis_left/image_raw": 2883,
+    "/davis_right/image_raw": 2883,
+    "/davis_left/events": 4324,
+    "/davis_right/events": 4324
+  },
+  "raw_event_counts": {
+    "/davis_left/events": 68340197,
+    "/davis_right/events": 60146982
+  }
+}

@@ -1,0 +1,489 @@
+{
+  "sequence": "Train_000",
+  "clock": {
+    "input_domain": "mocap",
+    "output_domain": "sensor",
+    "mocap_query_offset_sec": 0.4,
+    "formula": "t_sensor = t_mocap - offset",
+    "offset_application_count": 1,
+    "validation": "legacy_coarse_vo_fit_not_independent_hardware_sync"
+  },
+  "gravity": {
+    "R_align": [
+      [
+        -0.08456739780853706,
+        0.43155027024840575,
+        -0.8981162059980994
+      ],
+      [
+        0.43155027024840575,
+        0.8282857882988394,
+        0.3573611858480132
+      ],
+      [
+        0.8981162059980994,
+        -0.3573611858480132,
+        -0.25628160950969775
+      ]
+    ],
+    "origin_mocap_world_xyz": [
+      -0.12820019743806113,
+      0.5822103940660165,
+      1.1820546129713516
+    ],
+    "origin_sensor_timestamp": 1779617801.306561,
+    "valid_samples": 8709,
+    "mean_specific_force_before": [
+      8.645681065618312,
+      -3.4401236916101396,
+      -2.467085043122879
+    ],
+    "mean_specific_force_after": [
+      -1.8549921003165957e-15,
+      4.864996063341347e-16,
+      9.6264614844692
+    ],
+    "gravity_world": [
+      0,
+      0,
+      -9.7879
+    ]
+  },
+  "quality_intervals": [
+    {
+      "start": 1779617821.378462,
+      "end": 1779617822.2910779,
+      "reason": "timestamp_gap"
+    },
+    {
+      "start": 1779617822.051078,
+      "end": 1779617822.2911217,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779617822.051122,
+      "end": 1779617822.2911448,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779617822.051145,
+      "end": 1779617822.2911658,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779617822.051166,
+      "end": 1779617822.2911859,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779617822.051186,
+      "end": 1779617822.291206,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779617822.051206,
+      "end": 1779617822.2912278,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779617822.051228,
+      "end": 1779617822.2912478,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779617822.051248,
+      "end": 1779617822.2912688,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779617822.051269,
+      "end": 1779617822.2912889,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779617822.051289,
+      "end": 1779617822.2913108,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779617822.051311,
+      "end": 1779617822.2913318,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779617822.051332,
+      "end": 1779617822.2913518,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779617822.051352,
+      "end": 1779617822.2913718,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779617822.051372,
+      "end": 1779617822.2913918,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779617822.051392,
+      "end": 1779617822.2914119,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779617822.051412,
+      "end": 1779617822.2914329,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779617822.051433,
+      "end": 1779617822.2914639,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779617822.051464,
+      "end": 1779617822.2914848,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779617822.051485,
+      "end": 1779617822.2915068,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779617822.051507,
+      "end": 1779617822.2915359,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779617822.051536,
+      "end": 1779617822.2915719,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779617822.051572,
+      "end": 1779617822.2916207,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779617822.051621,
+      "end": 1779617822.291643,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779617822.0516431,
+      "end": 1779617822.2916558,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779617822.051656,
+      "end": 1779617822.291669,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779617822.0516691,
+      "end": 1779617822.2916837,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779617822.051684,
+      "end": 1779617822.2916968,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779617822.051697,
+      "end": 1779617822.29171,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779617822.0517101,
+      "end": 1779617822.2917237,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779617822.051724,
+      "end": 1779617822.291746,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779617822.0517461,
+      "end": 1779617822.2917597,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779617822.05176,
+      "end": 1779617822.2917738,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779617822.051774,
+      "end": 1779617822.291787,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779617822.0517871,
+      "end": 1779617822.2918017,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779617822.051802,
+      "end": 1779617822.2918158,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779617822.051816,
+      "end": 1779617822.2918298,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779617822.05183,
+      "end": 1779617822.2918427,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779617822.051843,
+      "end": 1779617822.2918568,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779617822.051857,
+      "end": 1779617822.2919178,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779617822.051918,
+      "end": 1779617822.2919338,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779617822.051934,
+      "end": 1779617822.2919488,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779617822.051949,
+      "end": 1779617822.2919638,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779617822.051964,
+      "end": 1779617822.291978,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779617822.051978,
+      "end": 1779617822.2919917,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779617822.051992,
+      "end": 1779617822.2920108,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779617822.052011,
+      "end": 1779617822.2920249,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779617822.052025,
+      "end": 1779617822.2920387,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779617822.052039,
+      "end": 1779617822.2920609,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779617822.052061,
+      "end": 1779617822.2920737,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779617822.052074,
+      "end": 1779617822.2920878,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779617822.052088,
+      "end": 1779617822.2921019,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779617822.052102,
+      "end": 1779617822.2921147,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779617822.052115,
+      "end": 1779617822.2921278,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779617822.052128,
+      "end": 1779617822.2921417,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779617822.052142,
+      "end": 1779617822.2921557,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779617822.052156,
+      "end": 1779617822.2921689,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779617822.052169,
+      "end": 1779617822.2921877,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779617822.052188,
+      "end": 1779617822.292204,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779617822.0522041,
+      "end": 1779617822.2922177,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779617822.052218,
+      "end": 1779617822.2922318,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779617822.052232,
+      "end": 1779617822.2922468,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779617822.052247,
+      "end": 1779617822.292261,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779617822.052261,
+      "end": 1779617822.292276,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779617822.0522761,
+      "end": 1779617822.2922888,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779617822.052289,
+      "end": 1779617822.2923028,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779617822.052303,
+      "end": 1779617822.2923157,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779617822.052316,
+      "end": 1779617822.2923307,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779617822.052331,
+      "end": 1779617822.2923539,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779617822.052354,
+      "end": 1779617822.2923677,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779617822.052368,
+      "end": 1779617822.2923818,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779617822.052382,
+      "end": 1779617822.2923958,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779617822.052396,
+      "end": 1779617822.29241,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779617822.0524101,
+      "end": 1779617822.2924228,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779617822.052423,
+      "end": 1779617822.2924368,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779617822.052437,
+      "end": 1779617822.2924497,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779617822.056636,
+      "end": 1779617822.2966788,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779617822.056679,
+      "end": 1779617822.2967067,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779617822.056707,
+      "end": 1779617822.2967298,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779617822.05673,
+      "end": 1779617822.2967598,
+      "reason": "timestamp_burst"
+    }
+  ],
+  "calibration_window_audit": {
+    "eligible": true,
+    "reasons": [],
+    "source": "legacy_full_usable_vo_fit"
+  },
+  "spatial_source": "actual_legacy_T_M_I_preserved_not_recomposed",
+  "tmi_composition_translation_delta_m": 0.0023915589240671004,
+  "vo_duplicate_rows_removed": 0,
+  "original_gt_rows": 9222,
+  "gt_valid_rows": 8709,
+  "pseudo_bias_rows": 8981,
+  "pseudo_bias_status": "research_residual_not_hardware_bias_truth",
+  "quality_policy": {
+    "min_dt_sec": 0.001,
+    "max_dt_sec": 0.05,
+    "guard_sec": 0.12
+  },
+  "source_hashes": {
+    "Body_0.csv": "4f4a7e33740b0e335710d44c1ac2b0027d3d7b77479e16e93d5fb5df1775bd0f",
+    "Body_0.tum": "c51c09b68581d2918971f06fef281e4892c454deb82a30c7ae96cd94dcaa9389",
+    "Body_0.cmb": "d3fc35be43dd3b5378c40779b7c0a5bb2f58827b1582595ed5d4f5b84ee231a3",
+    "T_M_I.yaml": "af46e9e2432b6e860d51022377fb9cccd5af48d1aa1d22dca9c3e5a5cb1d739b",
+    "ATO/vo_imu_gravity_aligned.tum": "4be0ef19963f7815f2d9814424acdde067f7fc621b9a66f354dd44752fc0dc74"
+  },
+  "raw_topic_counts": {
+    "/davis_left/events": 4411,
+    "/davis_left/imu": 73386,
+    "/davis_right/events": 4411,
+    "/davis_right/image_raw": 2940,
+    "/davis_left/image_raw": 2940
+  },
+  "raw_event_counts": {
+    "/davis_left/events": 41871714,
+    "/davis_right/events": 37122500
+  }
+}

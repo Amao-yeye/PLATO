@@ -1,0 +1,95 @@
+{
+  "sequence": "Test_005",
+  "clock": {
+    "input_domain": "mocap",
+    "output_domain": "sensor",
+    "mocap_query_offset_sec": 0.4,
+    "formula": "t_sensor = t_mocap - offset",
+    "offset_application_count": 1,
+    "validation": "legacy_coarse_vo_fit_not_independent_hardware_sync"
+  },
+  "gravity": {
+    "R_align": [
+      [
+        -0.1825903602367614,
+        0.3949885906437357,
+        -0.9003581363045957
+      ],
+      [
+        0.3949885906437357,
+        0.8680726716667222,
+        0.30072221395612714
+      ],
+      [
+        0.9003581363045957,
+        -0.30072221395612714,
+        -0.3145176885700392
+      ]
+    ],
+    "origin_mocap_world_xyz": [
+      -0.6787240711467534,
+      0.4262946753315158,
+      2.040502022815996
+    ],
+    "origin_sensor_timestamp": 1779618542.0480888,
+    "valid_samples": 9151,
+    "mean_specific_force_before": [
+      8.659545234057807,
+      -2.892313080356399,
+      -3.024996433377219
+    ],
+    "mean_specific_force_after": [
+      5.168179971055017e-16,
+      -7.233750424784286e-17,
+      9.617889687319089
+    ],
+    "gravity_world": [
+      0,
+      0,
+      -9.7879
+    ]
+  },
+  "quality_intervals": [],
+  "calibration_window_audit": {
+    "eligible": false,
+    "reasons": [
+      "calibration_window_contains_dark_frames"
+    ],
+    "raw_image_start": 1779618542.0540743,
+    "expected_first20_end": 1779618562.0540743,
+    "legacy_window_start": 1779618542.0540743,
+    "legacy_window_end": 1779618561.2790995,
+    "legacy_dark_image_frames": 1,
+    "available_first20_light_on_unique_vo": 769
+  },
+  "spatial_source": "actual_legacy_T_M_I_preserved_not_recomposed",
+  "tmi_composition_translation_delta_m": 1.1443916996305594e-16,
+  "vo_duplicate_rows_removed": 276,
+  "original_gt_rows": 9502,
+  "gt_valid_rows": 9151,
+  "pseudo_bias_rows": 0,
+  "pseudo_bias_status": "research_residual_not_hardware_bias_truth",
+  "quality_policy": {
+    "min_dt_sec": 0.001,
+    "max_dt_sec": 0.05,
+    "guard_sec": 0.12
+  },
+  "source_hashes": {
+    "Body_0.csv": "c823c34c11b01303168e3dd367eb1f5a3b5c32b4d9009b95f37658625095887f",
+    "Body_0.tum": "1b38af9116192680b5ef2fca8d07614fa66e892b775e56a5cad2a33dfd75bb48",
+    "Body_0.cmb": "7835988ed93378ae9648ac65453462082e83b9f7da1e68e7d3ba21d670154d85",
+    "T_M_I.yaml": "8b1c2d4030e960ef28a4179c988683f7d7a36631e441f7c4a380b1177c37b5c3",
+    "ATO/vo_imu_gravity_aligned.tum": "411aa19af27f57367c64b3afdb5a633fe7dd9438134018e3378db908c29a837f"
+  },
+  "raw_topic_counts": {
+    "/davis_left/imu": 76138,
+    "/davis_left/events": 4576,
+    "/davis_right/events": 4576,
+    "/davis_right/image_raw": 3050,
+    "/davis_left/image_raw": 3050
+  },
+  "raw_event_counts": {
+    "/davis_left/events": 62839217,
+    "/davis_right/events": 56500555
+  }
+}

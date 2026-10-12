@@ -1,0 +1,494 @@
+{
+  "sequence": "Test_019",
+  "clock": {
+    "input_domain": "mocap",
+    "output_domain": "sensor",
+    "mocap_query_offset_sec": 0.8,
+    "formula": "t_sensor = t_mocap - offset",
+    "offset_application_count": 1,
+    "validation": "legacy_coarse_vo_fit_not_independent_hardware_sync"
+  },
+  "gravity": {
+    "R_align": [
+      [
+        -0.08755683748007026,
+        0.34624396564900334,
+        -0.9340497398223184
+      ],
+      [
+        0.34624396564900334,
+        0.8897667877054334,
+        0.29737212335389857
+      ],
+      [
+        0.9340497398223184,
+        -0.29737212335389857,
+        -0.19779004977463704
+      ]
+    ],
+    "origin_mocap_world_xyz": [
+      0.6422855079738503,
+      1.7509136882177558,
+      2.5841498294837546
+    ],
+    "origin_sensor_timestamp": 1779620737.240078,
+    "valid_samples": 8976,
+    "mean_specific_force_before": [
+      8.977776125374948,
+      -2.858242163748733,
+      -1.9010923198171954
+    ],
+    "mean_specific_force_after": [
+      7.397825134472742e-16,
+      2.032742796227743e-17,
+      9.611668139945918
+    ],
+    "gravity_world": [
+      0,
+      0,
+      -9.7879
+    ]
+  },
+  "quality_intervals": [
+    {
+      "start": 1779620790.979123,
+      "end": 1779620791.892017,
+      "reason": "timestamp_gap"
+    },
+    {
+      "start": 1779620791.652017,
+      "end": 1779620791.892076,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779620791.6520762,
+      "end": 1779620791.892117,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779620791.6521173,
+      "end": 1779620791.892159,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779620791.6521592,
+      "end": 1779620791.8922029,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779620791.652203,
+      "end": 1779620791.892243,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779620791.6522431,
+      "end": 1779620791.892284,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779620791.6522841,
+      "end": 1779620791.89233,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779620791.6523302,
+      "end": 1779620791.892448,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779620791.6524482,
+      "end": 1779620791.8925068,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779620791.652507,
+      "end": 1779620791.892552,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779620791.6525521,
+      "end": 1779620791.8926039,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779620791.652604,
+      "end": 1779620791.892645,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779620791.652645,
+      "end": 1779620791.8927748,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779620791.652775,
+      "end": 1779620791.89282,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779620791.65282,
+      "end": 1779620791.892874,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779620791.6528742,
+      "end": 1779620791.8929188,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779620791.652919,
+      "end": 1779620791.892969,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779620791.6529691,
+      "end": 1779620791.8930109,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779620791.653011,
+      "end": 1779620791.893054,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779620791.6530542,
+      "end": 1779620791.893096,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779620791.6530962,
+      "end": 1779620791.893153,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779620791.6531532,
+      "end": 1779620791.8931959,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779620791.653196,
+      "end": 1779620791.893246,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779620791.6532462,
+      "end": 1779620791.893314,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779620791.653314,
+      "end": 1779620791.89338,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779620791.657761,
+      "end": 1779620791.897824,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779620791.6578243,
+      "end": 1779620791.8978698,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779620791.65787,
+      "end": 1779620791.897912,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779620791.6579123,
+      "end": 1779620791.89795,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779620791.6579502,
+      "end": 1779620791.897992,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779620791.6579921,
+      "end": 1779620791.898035,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779620791.6580353,
+      "end": 1779620791.898078,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779620791.6580782,
+      "end": 1779620791.898119,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779620791.6581192,
+      "end": 1779620791.898159,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779620791.6581593,
+      "end": 1779620791.898196,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779620791.6581962,
+      "end": 1779620791.898242,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779620791.6582422,
+      "end": 1779620791.898285,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779620791.6582851,
+      "end": 1779620791.898424,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779620791.6584241,
+      "end": 1779620791.8984659,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779620791.658466,
+      "end": 1779620791.898509,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779620791.6585093,
+      "end": 1779620791.898555,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779620791.6585553,
+      "end": 1779620791.898598,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779620791.6585982,
+      "end": 1779620791.898639,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779620791.6586392,
+      "end": 1779620791.898681,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779620791.6586812,
+      "end": 1779620791.8987398,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779620791.65874,
+      "end": 1779620791.898783,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779620791.6587832,
+      "end": 1779620791.8988209,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779620791.658821,
+      "end": 1779620791.8988578,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779620791.658858,
+      "end": 1779620791.898895,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779620791.6588953,
+      "end": 1779620791.898918,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779620791.6589181,
+      "end": 1779620791.898949,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779620791.6589491,
+      "end": 1779620791.899019,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779620791.6590192,
+      "end": 1779620791.899045,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779620791.6590452,
+      "end": 1779620791.899071,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779620791.6590712,
+      "end": 1779620791.899097,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779620791.6590972,
+      "end": 1779620791.899119,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779620791.6591191,
+      "end": 1779620791.899144,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779620791.6591442,
+      "end": 1779620791.89917,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779620791.6591702,
+      "end": 1779620791.899196,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779620791.6591961,
+      "end": 1779620791.899219,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779620791.6592193,
+      "end": 1779620791.899245,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779620791.6592453,
+      "end": 1779620791.899272,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779620791.6592722,
+      "end": 1779620791.8992999,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779620791.6593,
+      "end": 1779620791.89937,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779620791.6593702,
+      "end": 1779620791.899472,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779620791.6594722,
+      "end": 1779620791.899499,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779620791.6594992,
+      "end": 1779620791.899523,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779620791.6595232,
+      "end": 1779620791.899551,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779620791.6595511,
+      "end": 1779620791.899576,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779620791.6595762,
+      "end": 1779620791.8995988,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779620791.659599,
+      "end": 1779620791.899622,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779620791.6596222,
+      "end": 1779620791.899647,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779620791.6596472,
+      "end": 1779620791.89967,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779620791.65967,
+      "end": 1779620791.8996959,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779620791.659696,
+      "end": 1779620791.89972,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779620791.6597202,
+      "end": 1779620791.8997478,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779620791.659748,
+      "end": 1779620791.89977,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779620791.6597703,
+      "end": 1779620791.8998199,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779620791.65982,
+      "end": 1779620791.8998508,
+      "reason": "timestamp_burst"
+    }
+  ],
+  "calibration_window_audit": {
+    "eligible": true,
+    "reasons": [],
+    "raw_image_start": 1779620737.2318883,
+    "expected_first20_end": 1779620757.2318883,
+    "legacy_window_start": 1779620737.2318883,
+    "legacy_window_end": 1779620757.2069142,
+    "legacy_dark_image_frames": 0,
+    "available_first20_light_on_unique_vo": 800
+  },
+  "spatial_source": "actual_legacy_T_M_I_preserved_not_recomposed",
+  "tmi_composition_translation_delta_m": 2.7755575615628914e-17,
+  "vo_duplicate_rows_removed": 266,
+  "original_gt_rows": 9482,
+  "gt_valid_rows": 8976,
+  "pseudo_bias_rows": 9259,
+  "pseudo_bias_status": "research_residual_not_hardware_bias_truth",
+  "quality_policy": {
+    "min_dt_sec": 0.001,
+    "max_dt_sec": 0.05,
+    "guard_sec": 0.12
+  },
+  "source_hashes": {
+    "Body_0.csv": "e327e7434c0125b91bfbdb43c3040d368dfc017822fea2501d802c6a77dceeda",
+    "Body_0.tum": "1a1a16f19f182462495adb499c013c96d7726c1a3f85d844f7e1b1d8daeab817",
+    "Body_0.cmb": "a4656559cb002be8f85dc68cf038907699ed5f2ed82446a826dd7d9d77938362",
+    "T_M_I.yaml": "7404bb2d5e7379ddd5391015a5e0562f6c5198d94025962aa7ce367377bffcdc",
+    "ATO/vo_imu_gravity_aligned.tum": "450a29cdc2cf12761e49e978f80caa36853b10d32ff9098bc08c33d31b0ee0cf"
+  },
+  "raw_topic_counts": {
+    "/davis_left/imu": 75612,
+    "/davis_right/image_raw": 3029,
+    "/davis_left/image_raw": 3029,
+    "/davis_left/events": 4544,
+    "/davis_right/events": 4544
+  },
+  "raw_event_counts": {
+    "/davis_left/events": 40953957,
+    "/davis_right/events": 36367892
+  }
+}

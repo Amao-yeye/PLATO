@@ -1,0 +1,238 @@
+{
+  "sequence": "Test_011",
+  "clock": {
+    "input_domain": "mocap",
+    "output_domain": "sensor",
+    "mocap_query_offset_sec": 0.4,
+    "formula": "t_sensor = t_mocap - offset",
+    "offset_application_count": 1,
+    "validation": "legacy_coarse_vo_fit_not_independent_hardware_sync"
+  },
+  "gravity": {
+    "R_align": [
+      [
+        -0.08084859878025286,
+        0.4230385936722781,
+        -0.9024975636194543
+      ],
+      [
+        0.4230385936722781,
+        0.8344248658524621,
+        0.3532329139687891
+      ],
+      [
+        0.9024975636194543,
+        -0.3532329139687891,
+        -0.24642373292779085
+      ]
+    ],
+    "origin_mocap_world_xyz": [
+      -0.3029579686427919,
+      0.4058843832125776,
+      1.9744227451150216
+    ],
+    "origin_sensor_timestamp": 1779619388.620327,
+    "valid_samples": 8921,
+    "mean_specific_force_before": [
+      8.677948857377613,
+      -3.3965046397135126,
+      -2.3694829080925306
+    ],
+    "mean_specific_force_after": [
+      -2.646946688594676e-16,
+      1.2444455012239145e-16,
+      9.615481755512798
+    ],
+    "gravity_world": [
+      0,
+      0,
+      -9.7879
+    ]
+  },
+  "quality_intervals": [
+    {
+      "start": 1779619397.313595,
+      "end": 1779619397.6074138,
+      "reason": "timestamp_gap"
+    },
+    {
+      "start": 1779619397.367414,
+      "end": 1779619397.6075118,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779619397.367512,
+      "end": 1779619397.6075919,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779619397.367592,
+      "end": 1779619397.6076708,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779619397.367671,
+      "end": 1779619397.6077297,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779619397.36773,
+      "end": 1779619397.6078038,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779619397.367804,
+      "end": 1779619397.6078818,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779619397.404659,
+      "end": 1779619397.6447847,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779619397.549684,
+      "end": 1779619397.7898428,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779619397.549843,
+      "end": 1779619397.7899568,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779619397.591763,
+      "end": 1779619397.8323448,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779619397.610235,
+      "end": 1779619397.8503237,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779619397.628089,
+      "end": 1779619397.8681529,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779619399.521935,
+      "end": 1779619399.7619917,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779619399.577891,
+      "end": 1779619399.8179178,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779619399.627123,
+      "end": 1779619399.8672078,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779619399.659744,
+      "end": 1779619399.8997867,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779619399.659787,
+      "end": 1779619399.8998148,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779619399.659815,
+      "end": 1779619399.899845,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779619399.772804,
+      "end": 1779619400.0128458,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779619400.15788,
+      "end": 1779619400.3983707,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779619401.045236,
+      "end": 1779619401.2852728,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779619402.094818,
+      "end": 1779619402.3348598,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779619402.142154,
+      "end": 1779619402.3821807,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779619402.142181,
+      "end": 1779619402.3821988,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779619402.142199,
+      "end": 1779619402.3822129,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779619402.142213,
+      "end": 1779619402.3822258,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779619427.088868,
+      "end": 1779619427.3289068,
+      "reason": "timestamp_burst"
+    }
+  ],
+  "calibration_window_audit": {
+    "eligible": false,
+    "reasons": [
+      "calibration_not_anchored_to_recording_start",
+      "calibration_window_contains_dark_frames",
+      "insufficient_first20_light_on_vo"
+    ],
+    "raw_image_start": 1779619388.6051595,
+    "expected_first20_end": 1779619408.6051595,
+    "legacy_window_start": 1779619430.8552134,
+    "legacy_window_end": 1779619450.8302395,
+    "legacy_dark_image_frames": 90,
+    "available_first20_light_on_unique_vo": 0
+  },
+  "spatial_source": "actual_legacy_T_M_I_preserved_not_recomposed",
+  "tmi_composition_translation_delta_m": 6.206335383118183e-17,
+  "vo_duplicate_rows_removed": 209,
+  "original_gt_rows": 9694,
+  "gt_valid_rows": 8921,
+  "pseudo_bias_rows": 0,
+  "pseudo_bias_status": "research_residual_not_hardware_bias_truth",
+  "quality_policy": {
+    "min_dt_sec": 0.001,
+    "max_dt_sec": 0.05,
+    "guard_sec": 0.12
+  },
+  "source_hashes": {
+    "Body_0.csv": "1aa8e61394b6e8cd1de670639719a6c1e17f180880eee265dece7cb5acb079b7",
+    "Body_0.tum": "a7c28e21c57c557bb7def6abcb6a76c82fa3bc6b4bc7f396fe39ef80f2d6ec16",
+    "Body_0.cmb": "307809b2edcb91d716611a561097ca3c2c0ca76dd37e3c3a3a589d6a32b9d1a3",
+    "T_M_I.yaml": "a0a1d83a4dc9fdfa3cd48db71086a63662777c9d0796b80c44b145956af257ff",
+    "ATO/vo_imu_gravity_aligned.tum": "518e86c4b7e21aa6fa76162220a8fb6cfb3aff70f27ef6bc74735c091a9008b4"
+  },
+  "raw_topic_counts": {
+    "/davis_left/events": 4584,
+    "/davis_left/imu": 76263,
+    "/davis_right/events": 4584,
+    "/davis_left/image_raw": 3056,
+    "/davis_right/image_raw": 3056
+  },
+  "raw_event_counts": {
+    "/davis_left/events": 35204718,
+    "/davis_right/events": 32538994
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "sequence": "Train_004",
+  "clock": {
+    "input_domain": "mocap",
+    "output_domain": "sensor",
+    "mocap_query_offset_sec": 0.4,
+    "formula": "t_sensor = t_mocap - offset",
+    "offset_application_count": 1,
+    "validation": "legacy_coarse_vo_fit_not_independent_hardware_sync"
+  },
+  "gravity": {
+    "R_align": [
+      [
+        -0.21263036372769545,
+        0.37333262031262304,
+        -0.903001153394357
+      ],
+      [
+        0.37333262031262304,
+        0.8850620522472856,
+        0.2780070471810639
+      ],
+      [
+        0.903001153394357,
+        -0.2780070471810639,
+        -0.32756831148041005
+      ]
+    ],
+    "origin_mocap_world_xyz": [
+      -0.3734264897944911,
+      0.5199838280023861,
+      1.5855681405963364
+    ],
+    "origin_sensor_timestamp": 1779618362.7198899,
+    "valid_samples": 8775,
+    "mean_specific_force_before": [
+      8.680004052036425,
+      -2.672313636539145,
+      -3.1487161010601405
+    ],
+    "mean_specific_force_after": [
+      7.935900610374356e-16,
+      -4.085061512171251e-16,
+      9.612395310247972
+    ],
+    "gravity_world": [
+      0,
+      0,
+      -9.7879
+    ]
+  },
+  "quality_intervals": [],
+  "calibration_window_audit": {
+    "eligible": true,
+    "reasons": [],
+    "source": "legacy_full_usable_vo_fit"
+  },
+  "spatial_source": "actual_legacy_T_M_I_preserved_not_recomposed",
+  "tmi_composition_translation_delta_m": 0.003461634576624639,
+  "vo_duplicate_rows_removed": 0,
+  "original_gt_rows": 9211,
+  "gt_valid_rows": 8775,
+  "pseudo_bias_rows": 9095,
+  "pseudo_bias_status": "research_residual_not_hardware_bias_truth",
+  "quality_policy": {
+    "min_dt_sec": 0.001,
+    "max_dt_sec": 0.05,
+    "guard_sec": 0.12
+  },
+  "source_hashes": {
+    "Body_0.csv": "ad8b3f62cf27f6c0e41b5efe2df92066d70964b1648f4c3f5632c945887355fb",
+    "Body_0.tum": "935747abdb29dea7de1c00c41b19f02c916eb94e3fc54bfa8e419fd96a0e5de8",
+    "Body_0.cmb": "f13600824ccff0eca16e6c97a7629bbf23b5e53c23944df3eedbe9a111c341b7",
+    "T_M_I.yaml": "a51fb5d97ae575dc78bd046b7c28b5da1682589eee90dc9134d24d4832879ee9",
+    "ATO/vo_imu_gravity_aligned.tum": "d86279c86dbd6df1db15eba8d98b8b938c77e3dd2baf7a0bd059f2a573d15ef6"
+  },
+  "raw_topic_counts": {
+    "/davis_left/imu": 73015,
+    "/davis_left/events": 4389,
+    "/davis_left/image_raw": 2925,
+    "/davis_right/image_raw": 2926,
+    "/davis_right/events": 4388
+  },
+  "raw_event_counts": {
+    "/davis_left/events": 60023393,
+    "/davis_right/events": 53220440
+  }
+}

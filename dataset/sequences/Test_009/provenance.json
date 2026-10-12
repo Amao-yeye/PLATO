@@ -1,0 +1,101 @@
+{
+  "sequence": "Test_009",
+  "clock": {
+    "input_domain": "mocap",
+    "output_domain": "sensor",
+    "mocap_query_offset_sec": 0.8,
+    "formula": "t_sensor = t_mocap - offset",
+    "offset_application_count": 1,
+    "validation": "legacy_coarse_vo_fit_not_independent_hardware_sync"
+  },
+  "gravity": {
+    "R_align": [
+      [
+        -0.06204514863678806,
+        0.4551584738957707,
+        -0.888246116327852
+      ],
+      [
+        0.4551584738957707,
+        0.8049336823156308,
+        0.38067378516870903
+      ],
+      [
+        0.888246116327852,
+        -0.38067378516870903,
+        -0.25711146632115744
+      ]
+    ],
+    "origin_mocap_world_xyz": [
+      0.582717000845108,
+      0.16872162246623584,
+      2.654798984377883
+    ],
+    "origin_sensor_timestamp": 1779619017.153575,
+    "valid_samples": 9811,
+    "mean_specific_force_before": [
+      8.542636717590241,
+      -3.6610999978816396,
+      -2.472749176533286
+    ],
+    "mean_specific_force_after": [
+      -5.605955879420539e-16,
+      -5.567299859723231e-16,
+      9.617420848296906
+    ],
+    "gravity_world": [
+      0,
+      0,
+      -9.7879
+    ]
+  },
+  "quality_intervals": [
+    {
+      "start": 1779619014.9979002,
+      "end": 1779619015.237944,
+      "reason": "timestamp_burst"
+    }
+  ],
+  "calibration_window_audit": {
+    "eligible": false,
+    "reasons": [
+      "calibration_window_contains_dark_frames"
+    ],
+    "raw_image_start": 1779619017.1546834,
+    "expected_first20_end": 1779619037.1546834,
+    "legacy_window_start": 1779619017.1546834,
+    "legacy_window_end": 1779619036.9797084,
+    "legacy_dark_image_frames": 2,
+    "available_first20_light_on_unique_vo": 792
+  },
+  "spatial_source": "actual_legacy_T_M_I_preserved_not_recomposed",
+  "tmi_composition_translation_delta_m": 0.0,
+  "vo_duplicate_rows_removed": 502,
+  "original_gt_rows": 10306,
+  "gt_valid_rows": 9811,
+  "pseudo_bias_rows": 0,
+  "pseudo_bias_status": "research_residual_not_hardware_bias_truth",
+  "quality_policy": {
+    "min_dt_sec": 0.001,
+    "max_dt_sec": 0.05,
+    "guard_sec": 0.12
+  },
+  "source_hashes": {
+    "Body_0.csv": "53a440f628fa573de4ec12ce8359216fdd24c3c97626a4822e3051715975f8e3",
+    "Body_0.tum": "15952ead01262c2da364fc3aeed0c7f2dabcc670a9114e0203d8966b4882934b",
+    "Body_0.cmb": "5948f0f3c0ea1797340618af64f0783d275e1d43767bb9fafe6e9dfe768565d4",
+    "T_M_I.yaml": "48cc50c001aaa52f7d6f944ab97bdf22269310fb8d98ef3e3bac0cc9f0b2a833",
+    "ATO/vo_imu_gravity_aligned.tum": "42cff1ccd9f968c5aeeaa793137902297a2c77bfb5f49531992fe6f74c74319d"
+  },
+  "raw_topic_counts": {
+    "/davis_left/imu": 81630,
+    "/davis_left/events": 4906,
+    "/davis_right/events": 4906,
+    "/davis_right/image_raw": 3270,
+    "/davis_left/image_raw": 3270
+  },
+  "raw_event_counts": {
+    "/davis_left/events": 72803252,
+    "/davis_right/events": 64046929
+  }
+}

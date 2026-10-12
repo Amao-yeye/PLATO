@@ -1,0 +1,484 @@
+{
+  "sequence": "Test_007",
+  "clock": {
+    "input_domain": "mocap",
+    "output_domain": "sensor",
+    "mocap_query_offset_sec": 0.4,
+    "formula": "t_sensor = t_mocap - offset",
+    "offset_application_count": 1,
+    "validation": "legacy_coarse_vo_fit_not_independent_hardware_sync"
+  },
+  "gravity": {
+    "R_align": [
+      [
+        -0.10464711928479492,
+        0.44400396690581684,
+        -0.8898929473803532
+      ],
+      [
+        0.44400396690581684,
+        0.8215361999443407,
+        0.35768526605510403
+      ],
+      [
+        0.8898929473803532,
+        -0.35768526605510403,
+        -0.28311091934045424
+      ]
+    ],
+    "origin_mocap_world_xyz": [
+      -0.36540995958535305,
+      0.5188402930423106,
+      1.952120594508862
+    ],
+    "origin_sensor_timestamp": 1779618793.2673979,
+    "valid_samples": 8817,
+    "mean_specific_force_before": [
+      8.534935958138835,
+      -3.430548413645696,
+      -2.715308142101513
+    ],
+    "mean_specific_force_after": [
+      1.1132960956372782e-16,
+      7.675072446123224e-17,
+      9.590969321943483
+    ],
+    "gravity_world": [
+      0,
+      0,
+      -9.7879
+    ]
+  },
+  "quality_intervals": [
+    {
+      "start": 1779618811.378659,
+      "end": 1779618812.2729588,
+      "reason": "timestamp_gap"
+    },
+    {
+      "start": 1779618812.032959,
+      "end": 1779618812.2730217,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618812.033022,
+      "end": 1779618812.2730649,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618812.033065,
+      "end": 1779618812.2731059,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618812.033106,
+      "end": 1779618812.2731447,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618812.033145,
+      "end": 1779618812.2731838,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618812.033184,
+      "end": 1779618812.2732227,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618812.033223,
+      "end": 1779618812.2732608,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618812.033261,
+      "end": 1779618812.2732987,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618812.033299,
+      "end": 1779618812.2733357,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618812.033336,
+      "end": 1779618812.2733717,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618812.033372,
+      "end": 1779618812.2734149,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618812.033415,
+      "end": 1779618812.2734518,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618812.033452,
+      "end": 1779618812.2734888,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618812.033489,
+      "end": 1779618812.2735758,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618812.033576,
+      "end": 1779618812.273615,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618812.033615,
+      "end": 1779618812.2736547,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618812.033655,
+      "end": 1779618812.273697,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618812.0336971,
+      "end": 1779618812.2737348,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618812.033735,
+      "end": 1779618812.273759,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618812.033759,
+      "end": 1779618812.2737808,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618812.033781,
+      "end": 1779618812.273805,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618812.0338051,
+      "end": 1779618812.273826,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618812.033826,
+      "end": 1779618812.2738447,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618812.033845,
+      "end": 1779618812.2738788,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618812.033879,
+      "end": 1779618812.2739058,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618812.033906,
+      "end": 1779618812.2739327,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618812.033933,
+      "end": 1779618812.2739558,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618812.037975,
+      "end": 1779618812.2780259,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618812.038026,
+      "end": 1779618812.2780519,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618812.038052,
+      "end": 1779618812.2780757,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618812.038076,
+      "end": 1779618812.2781029,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618812.038103,
+      "end": 1779618812.2781239,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618812.038124,
+      "end": 1779618812.278144,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618812.038144,
+      "end": 1779618812.2781649,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618812.038165,
+      "end": 1779618812.2781968,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618812.038197,
+      "end": 1779618812.278221,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618812.0382211,
+      "end": 1779618812.2782419,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618812.038242,
+      "end": 1779618812.2782679,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618812.038268,
+      "end": 1779618812.278288,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618812.038288,
+      "end": 1779618812.2783077,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618812.038308,
+      "end": 1779618812.278432,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618812.0384321,
+      "end": 1779618812.2784557,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618812.038456,
+      "end": 1779618812.2784758,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618812.038476,
+      "end": 1779618812.2784948,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618812.038495,
+      "end": 1779618812.2785168,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618812.038517,
+      "end": 1779618812.27854,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618812.0385401,
+      "end": 1779618812.2785609,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618812.038561,
+      "end": 1779618812.2785788,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618812.038579,
+      "end": 1779618812.2785988,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618812.038599,
+      "end": 1779618812.2786217,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618812.038622,
+      "end": 1779618812.2786407,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618812.038641,
+      "end": 1779618812.2786589,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618812.038659,
+      "end": 1779618812.2786808,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618812.038681,
+      "end": 1779618812.2787077,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618812.038708,
+      "end": 1779618812.2787287,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618812.038729,
+      "end": 1779618812.2787929,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618812.038793,
+      "end": 1779618812.278813,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618812.038813,
+      "end": 1779618812.2788317,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618812.038832,
+      "end": 1779618812.2788527,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618812.038853,
+      "end": 1779618812.2788749,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618812.038875,
+      "end": 1779618812.2788959,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618812.038896,
+      "end": 1779618812.2789168,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618812.038917,
+      "end": 1779618812.2789378,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618812.038938,
+      "end": 1779618812.2789588,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618812.038959,
+      "end": 1779618812.2790077,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618812.039008,
+      "end": 1779618812.2790327,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618812.039033,
+      "end": 1779618812.2790577,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618812.039058,
+      "end": 1779618812.2790837,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618812.039084,
+      "end": 1779618812.2791038,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618812.039104,
+      "end": 1779618812.2791238,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618812.039124,
+      "end": 1779618812.279204,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618812.0392041,
+      "end": 1779618812.2792697,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618812.03927,
+      "end": 1779618812.2792947,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618812.039295,
+      "end": 1779618812.2793157,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618812.039316,
+      "end": 1779618812.2793348,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618812.039335,
+      "end": 1779618812.2793539,
+      "reason": "timestamp_burst"
+    },
+    {
+      "start": 1779618812.039354,
+      "end": 1779618812.2793827,
+      "reason": "timestamp_burst"
+    }
+  ],
+  "calibration_window_audit": {
+    "eligible": true,
+    "reasons": [],
+    "raw_image_start": 1779618793.2543964,
+    "expected_first20_end": 1779618813.2543964,
+    "legacy_window_start": 1779618793.2543964,
+    "legacy_window_end": 1779618813.2294214,
+    "legacy_dark_image_frames": 0,
+    "available_first20_light_on_unique_vo": 795
+  },
+  "spatial_source": "actual_legacy_T_M_I_preserved_not_recomposed",
+  "tmi_composition_translation_delta_m": 5.551115123125783e-17,
+  "vo_duplicate_rows_removed": 355,
+  "original_gt_rows": 9527,
+  "gt_valid_rows": 8817,
+  "pseudo_bias_rows": 9093,
+  "pseudo_bias_status": "research_residual_not_hardware_bias_truth",
+  "quality_policy": {
+    "min_dt_sec": 0.001,
+    "max_dt_sec": 0.05,
+    "guard_sec": 0.12
+  },
+  "source_hashes": {
+    "Body_0.csv": "4cfe9edb0b65dd4925e4ff1e18cd20b1d7203647e5a5cbf6f17fc276e47bc2a6",
+    "Body_0.tum": "f4313b018134cee33fd1388dbd5563c90191b926da6208188c4003355a4c5520",
+    "Body_0.cmb": "7c066380ae0d55c7cafc9cc1183f008f2b08e863b70bfd296de7addf5b4fd676",
+    "T_M_I.yaml": "435a7c09a8015648e6128471b31d88f3f2ae98086d3ac680b63b3ec196cd75eb",
+    "ATO/vo_imu_gravity_aligned.tum": "f47685f7967217f0c7249962de7b390d80bfd696ed3e81e114c6a8d851e2afda"
+  },
+  "raw_topic_counts": {
+    "/davis_left/imu": 74264,
+    "/davis_left/image_raw": 2975,
+    "/davis_right/image_raw": 2975,
+    "/davis_left/events": 4463,
+    "/davis_right/events": 4463
+  },
+  "raw_event_counts": {
+    "/davis_left/events": 67258437,
+    "/davis_right/events": 60367100
+  }
+}

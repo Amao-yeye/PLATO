@@ -1,0 +1,21 @@
+{
+  "total_image_frames": 2868,
+  "tracked_image_frames": 2863,
+  "image_frame_coverage": 0.9982566248256625,
+  "missing_image_runs": [
+    {
+      "start": 1779619368.3051333,
+      "end": 1779619368.4051332,
+      "frames": 5
+    }
+  ],
+  "vo_gaps": [
+    {
+      "start": 1779619368.2801335,
+      "end": 1779619368.4301336,
+      "duration": 0.15000009536743164
+    }
+  ],
+  "map_ids_available": false,
+  "recovery_semantics": "gaps_only_not_verified_relocalization"
+}
