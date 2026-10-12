@@ -1,15 +1,15 @@
-# PLATO · AquaLux
+# PLATO
 
 **Preintegration-Based Likelihood Maximization from Accurate Trajectory Observations for Neural Inertial Odometry**
 
-[Project page](https://amao-yeye.github.io/PLATO/) · [Download AquaLux](https://github.com/Amao-yeye/PLATO/releases/tag/aqualux-v0.1.0) · [Dataset documentation](dataset/README.md)
+[Project page](https://amao-yeye.github.io/PLATO/) · [AquaLux on Hugging Face](https://huggingface.co/datasets/Amao666/AquaLux) · [Method figure](docs/assets/plato-framework.png) · [Dataset documentation](dataset/README.md)
 
 Haoying Li · Qihang Liu · Yifan Peng · Keyan Miao · Junfeng Wu
 
-This initial public distribution focuses on the AquaLux dataset: 20 underwater recordings with stereo events, grayscale frames, IMU measurements and motion capture, including 36 intermittent light-off intervals.
+The project page follows the camera-ready manuscript: overview, method, sparse likelihood and double-adjoint optimization, EuRoC and underwater experiments, training efficiency, and the AquaLux dataset.
 
-The project page includes the method figure, dataset overview, a bilingual interactive trajectory explorer, actual brightness and IMU previews, and download links.
+The page uses Inter for text, KaTeX's default mathematics fonts for formulas, and a water-blue/teal theme. It includes original method and training-strategy figures plus an interactive explorer for all 20 AquaLux sequences.
 
-The reference-data archive and compressed original recordings are provided as GitHub Release assets. The repository includes the reference tables and static website. Algorithm, training and data-processing implementations are not included.
+The data-only AquaLux preview is hosted on Hugging Face. It contains original stereo event/frame/IMU recordings, mocap-derived reference trajectories, quality masks, calibration, sensor tables and light-off annotations. The GitHub repository contains the project page and reference documentation; algorithm, training and processing implementations are not included.
 
-AquaLux v0.1.0 retains its preview status. Licensing and contact metadata remain pending; the reference trajectories and hardware synchronization have not been independently validated. See the dataset card and known issues for details.
+AquaLux v0.1.0 retains its preview status. Dataset licensing and contact metadata are pending publisher selection; physical reference accuracy and hardware synchronization have not been independently validated. See the dataset card and known issues.

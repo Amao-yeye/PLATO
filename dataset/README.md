@@ -3,7 +3,7 @@
 AquaLux is the underwater dataset associated with PLATO. This distribution contains data and project-page assets. Algorithm, training and processing implementations are not included in this initial release.
 
 - [Project page](https://amao-yeye.github.io/PLATO/)
-- [Dataset release and raw recordings](https://github.com/Amao-yeye/PLATO/releases/tag/aqualux-v0.1.0)
+- [AquaLux on Hugging Face](https://huggingface.co/datasets/Amao666/AquaLux)
 - [Dataset card](DATASET_CARD.md)
 - [Reference limitations](KNOWN_ISSUES.md)
 
@@ -15,9 +15,9 @@ AquaLux is the underwater dataset associated with PLATO. This distribution conta
 
 ## Download
 
-The release provides a compact reference-data archive and one gzip-compressed original ROS bag for each of the 20 sequences. Decompress each recording to obtain the original, byte-identical .bag file. No ROS installation is needed to decompress gzip files. A ROS1 bag reader is needed to inspect the original event and image messages.
+The Hugging Face repository provides a compact reference-data archive and one gzip-compressed original ROS bag for each of the 20 sequences. Decompress each recording to obtain the original, byte-identical .bag file. No ROS installation is needed to decompress gzip files. A ROS1 bag reader is needed to inspect the original event and image messages.
 
-The reference archive expands to dataset/. Place decompressed original recordings in dataset/raw/ to match manifest paths. RAW_RECORDINGS.json records their expected byte sizes, original SHA256 hashes and download links. Release SHA256SUMS records checksums of the compressed downloads. dataset/SHA256SUMS records checksums of the reference files. Verify against the appropriate manifest after downloading.
+The reference archive expands to dataset/. Place decompressed original recordings in dataset/raw/ to match manifest paths. RAW_RECORDINGS.json records their expected byte sizes, original SHA256 hashes and download links. The Hugging Face root SHA256SUMS records checksums of the downloads. This directory’s SHA256SUMS records checksums of the reference files. Verify against the appropriate manifest after downloading.
 
 ## Included reference data
 

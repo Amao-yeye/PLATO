@@ -5,7 +5,7 @@
     "raw_bytes": 1757723778,
     "raw_sha256": "8448c91d38a402e135e6ce391d3ca1dec680fd5444684e49745eed3d31bf3102",
     "asset": "Test_001.bag.gz",
-    "download_url": "https://github.com/Amao-yeye/PLATO/releases/download/aqualux-v0.1.0/Test_001.bag.gz"
+    "download_url": "https://huggingface.co/datasets/Amao666/AquaLux/resolve/main/raw/Test_001.bag.gz"
   },
   {
     "sequence": "Test_003",
@@ -13,7 +13,7 @@
     "raw_bytes": 2527243780,
     "raw_sha256": "bbb941e19ea5171859acf48b93182d0ab8e75fd72553014e0b04ea7c1a1882fd",
     "asset": "Test_003.bag.gz",
-    "download_url": "https://github.com/Amao-yeye/PLATO/releases/download/aqualux-v0.1.0/Test_003.bag.gz"
+    "download_url": "https://huggingface.co/datasets/Amao666/AquaLux/resolve/main/raw/Test_003.bag.gz"
   },
   {
     "sequence": "Test_005",
@@ -21,7 +21,7 @@
     "raw_bytes": 2131557194,
     "raw_sha256": "8c9161548fc9982cc0acbd4d6b3c5d09592bee853ccd86c8cea30cf5a9240272",
     "asset": "Test_005.bag.gz",
-    "download_url": "https://github.com/Amao-yeye/PLATO/releases/download/aqualux-v0.1.0/Test_005.bag.gz"
+    "download_url": "https://huggingface.co/datasets/Amao666/AquaLux/resolve/main/raw/Test_005.bag.gz"
   },
   {
     "sequence": "Test_007",
@@ -29,7 +29,7 @@
     "raw_bytes": 2225070901,
     "raw_sha256": "68a9deb1cfa8b4af72e9d2a23aa2ca5068035c6607da524fe236bc7e31f6f222",
     "asset": "Test_007.bag.gz",
-    "download_url": "https://github.com/Amao-yeye/PLATO/releases/download/aqualux-v0.1.0/Test_007.bag.gz"
+    "download_url": "https://huggingface.co/datasets/Amao666/AquaLux/resolve/main/raw/Test_007.bag.gz"
   },
   {
     "sequence": "Test_009",
@@ -37,7 +37,7 @@
     "raw_bytes": 2401067321,
     "raw_sha256": "b6d15c08282eefae3a877e856f87f0e74f656241febdc32e7e45f8b634f5b1ae",
     "asset": "Test_009.bag.gz",
-    "download_url": "https://github.com/Amao-yeye/PLATO/releases/download/aqualux-v0.1.0/Test_009.bag.gz"
+    "download_url": "https://huggingface.co/datasets/Amao666/AquaLux/resolve/main/raw/Test_009.bag.gz"
   },
   {
     "sequence": "Test_011",
@@ -45,7 +45,7 @@
     "raw_bytes": 1461610676,
     "raw_sha256": "f2126fe5fb1345941b8ad6a43cae34ddf6f53d2b6a7c42d925869692471f2d9c",
     "asset": "Test_011.bag.gz",
-    "download_url": "https://github.com/Amao-yeye/PLATO/releases/download/aqualux-v0.1.0/Test_011.bag.gz"
+    "download_url": "https://huggingface.co/datasets/Amao666/AquaLux/resolve/main/raw/Test_011.bag.gz"
   },
   {
     "sequence": "Test_013",
@@ -53,7 +53,7 @@
     "raw_bytes": 2051376270,
     "raw_sha256": "1e9485db2f64cc4d5cfbb42db2e3e354f3ff07783e911976e870712b3135daa3",
     "asset": "Test_013.bag.gz",
-    "download_url": "https://github.com/Amao-yeye/PLATO/releases/download/aqualux-v0.1.0/Test_013.bag.gz"
+    "download_url": "https://huggingface.co/datasets/Amao666/AquaLux/resolve/main/raw/Test_013.bag.gz"
   },
   {
     "sequence": "Test_015",
@@ -61,7 +61,7 @@
     "raw_bytes": 1826651903,
     "raw_sha256": "358dff10a1488c6f0eec3a30032b3c1a65efa2342dfa926f4f5b70875c9fd432",
     "asset": "Test_015.bag.gz",
-    "download_url": "https://github.com/Amao-yeye/PLATO/releases/download/aqualux-v0.1.0/Test_015.bag.gz"
+    "download_url": "https://huggingface.co/datasets/Amao666/AquaLux/resolve/main/raw/Test_015.bag.gz"
   },
   {
     "sequence": "Test_017",
@@ -69,7 +69,7 @@
     "raw_bytes": 1809965059,
     "raw_sha256": "e3a3ede5b5b0b60d02b4f9e14522d19cfe4a2c5f3988a5bdf93a3ed3ea5784c3",
     "asset": "Test_017.bag.gz",
-    "download_url": "https://github.com/Amao-yeye/PLATO/releases/download/aqualux-v0.1.0/Test_017.bag.gz"
+    "download_url": "https://huggingface.co/datasets/Amao666/AquaLux/resolve/main/raw/Test_017.bag.gz"
   },
   {
     "sequence": "Test_019",
@@ -77,7 +77,7 @@
     "raw_bytes": 1581073958,
     "raw_sha256": "a9ddb090a4560d14608f67fb2677ea8856b75bb7236a70cc52339d4856c5f697",
     "asset": "Test_019.bag.gz",
-    "download_url": "https://github.com/Amao-yeye/PLATO/releases/download/aqualux-v0.1.0/Test_019.bag.gz"
+    "download_url": "https://huggingface.co/datasets/Amao666/AquaLux/resolve/main/raw/Test_019.bag.gz"
   },
   {
     "sequence": "Train_000",
@@ -85,7 +85,7 @@
     "raw_bytes": 1585958567,
     "raw_sha256": "4f3a35b437c64bd5a5862a61f023f6edc1b8be20834db76d038f5ad1af00b597",
     "asset": "Train_000.bag.gz",
-    "download_url": "https://github.com/Amao-yeye/PLATO/releases/download/aqualux-v0.1.0/Train_000.bag.gz"
+    "download_url": "https://huggingface.co/datasets/Amao666/AquaLux/resolve/main/raw/Train_000.bag.gz"
   },
   {
     "sequence": "Train_002",
@@ -93,7 +93,7 @@
     "raw_bytes": 2493279319,
     "raw_sha256": "9424e335cfb89751e73184bece9762085a636fdb2d391e3d057cb54f03cee50c",
     "asset": "Train_002.bag.gz",
-    "download_url": "https://github.com/Amao-yeye/PLATO/releases/download/aqualux-v0.1.0/Train_002.bag.gz"
+    "download_url": "https://huggingface.co/datasets/Amao666/AquaLux/resolve/main/raw/Train_002.bag.gz"
   },
   {
     "sequence": "Train_004",
@@ -101,7 +101,7 @@
     "raw_bytes": 2028658215,
     "raw_sha256": "7c68c4cacf00d0aa8afbc2415787f64a6227c464a2b2f8ad2bf7dd13e4331e16",
     "asset": "Train_004.bag.gz",
-    "download_url": "https://github.com/Amao-yeye/PLATO/releases/download/aqualux-v0.1.0/Train_004.bag.gz"
+    "download_url": "https://huggingface.co/datasets/Amao666/AquaLux/resolve/main/raw/Train_004.bag.gz"
   },
   {
     "sequence": "Train_006",
@@ -109,7 +109,7 @@
     "raw_bytes": 2218820001,
     "raw_sha256": "d53b4f75e970fd9a812a88f0c71e71e16d9d81d10c95e60af12b7394d7aacec3",
     "asset": "Train_006.bag.gz",
-    "download_url": "https://github.com/Amao-yeye/PLATO/releases/download/aqualux-v0.1.0/Train_006.bag.gz"
+    "download_url": "https://huggingface.co/datasets/Amao666/AquaLux/resolve/main/raw/Train_006.bag.gz"
   },
   {
     "sequence": "Train_008",
@@ -117,7 +117,7 @@
     "raw_bytes": 2399136585,
     "raw_sha256": "f802eb2abb6b095dd2f93d3eb52f47ea73a41daa2b8cad4f6d35ab5fb17cb46f",
     "asset": "Train_008.bag.gz",
-    "download_url": "https://github.com/Amao-yeye/PLATO/releases/download/aqualux-v0.1.0/Train_008.bag.gz"
+    "download_url": "https://huggingface.co/datasets/Amao666/AquaLux/resolve/main/raw/Train_008.bag.gz"
   },
   {
     "sequence": "Train_010",
@@ -125,7 +125,7 @@
     "raw_bytes": 1407229972,
     "raw_sha256": "097d1552b3f667bac946a67c124886c035c8daa7b8e3393e9f29099fad7ea277",
     "asset": "Train_010.bag.gz",
-    "download_url": "https://github.com/Amao-yeye/PLATO/releases/download/aqualux-v0.1.0/Train_010.bag.gz"
+    "download_url": "https://huggingface.co/datasets/Amao666/AquaLux/resolve/main/raw/Train_010.bag.gz"
   },
   {
     "sequence": "Train_012",
@@ -133,7 +133,7 @@
     "raw_bytes": 1980311748,
     "raw_sha256": "332098ae75df1106ad6c686c555121b3030a69a25bcae45d592f459547de14a8",
     "asset": "Train_012.bag.gz",
-    "download_url": "https://github.com/Amao-yeye/PLATO/releases/download/aqualux-v0.1.0/Train_012.bag.gz"
+    "download_url": "https://huggingface.co/datasets/Amao666/AquaLux/resolve/main/raw/Train_012.bag.gz"
   },
   {
     "sequence": "Train_014",
@@ -141,7 +141,7 @@
     "raw_bytes": 1724664236,
     "raw_sha256": "e26a9c29ee4368e076141a446540dcefc48a7cf1d0ad61b16081b2280e8d274c",
     "asset": "Train_014.bag.gz",
-    "download_url": "https://github.com/Amao-yeye/PLATO/releases/download/aqualux-v0.1.0/Train_014.bag.gz"
+    "download_url": "https://huggingface.co/datasets/Amao666/AquaLux/resolve/main/raw/Train_014.bag.gz"
   },
   {
     "sequence": "Train_016",
@@ -149,7 +149,7 @@
     "raw_bytes": 1789536404,
     "raw_sha256": "ba89ccca1c7c1565c29d0016677c83a9a9d292fc0460b42f8f00a25f91566532",
     "asset": "Train_016.bag.gz",
-    "download_url": "https://github.com/Amao-yeye/PLATO/releases/download/aqualux-v0.1.0/Train_016.bag.gz"
+    "download_url": "https://huggingface.co/datasets/Amao666/AquaLux/resolve/main/raw/Train_016.bag.gz"
   },
   {
     "sequence": "Train_018",
@@ -157,6 +157,6 @@
     "raw_bytes": 1573772392,
     "raw_sha256": "fb9408cae638c79ead6a2abf886ae00aa663f78dfb7d33cbc273d3d736d71796",
     "asset": "Train_018.bag.gz",
-    "download_url": "https://github.com/Amao-yeye/PLATO/releases/download/aqualux-v0.1.0/Train_018.bag.gz"
+    "download_url": "https://huggingface.co/datasets/Amao666/AquaLux/resolve/main/raw/Train_018.bag.gz"
   }
 ]

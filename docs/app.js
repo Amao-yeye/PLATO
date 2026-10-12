@@ -1,45 +1,39 @@
 "use strict";
 (() => {
   const $ = id => document.getElementById(id);
-  const state = { language: "en", sequences: [], current: null, filter: "all", query: "", view: "3d", signal: "acc", yaw: .72, pitch: .52, zoom: 1, time: 0, playing: false, lastTick: 0, overview: "train" };
-  const t = (en, zh) => state.language === "zh" ? zh : en;
+  const state = { sequences: [], current: null, filter: "all", query: "", view: "3d", signal: "acc", yaw: .72, pitch: .52, zoom: 1, time: 0, playing: false, lastTick: 0, overview: "train" };
+  
   const setPressed = (selector, key, value) => document.querySelectorAll(selector).forEach(button => button.setAttribute("aria-pressed", String(button.dataset[key] === value)));
+  function renderEquations() {
+    if (!window.katex) return;
+    document.querySelectorAll("[data-tex]").forEach(element => {
+      element.innerHTML = window.katex.renderToString(element.dataset.tex, { displayMode: element.hasAttribute("data-display"), throwOnError: true, strict: "warn", output: "htmlAndMathml" });
+    });
+  }
+  document.querySelectorAll("[data-result]").forEach(button => button.addEventListener("click", () => {
+    setPressed("[data-result]", "result", button.dataset.result);
+    document.querySelectorAll("[data-result-panel]").forEach(panel => { panel.hidden = panel.dataset.resultPanel !== button.dataset.result; });
+  }));
   function overviewCaption() {
     $("overview-caption").textContent = state.overview === "train"
-      ? t("All ten training recordings under generally good lighting. These overview figures come from the historical dataset visualization; the interactive explorer uses the versioned, time-corrected reference.", "正常照明下的全部 10 段训练记录。概览图来自历史可视化，交互浏览器使用版本化且已做时间校正的轨迹参考。")
-      : t("All ten testing recordings with intermittent light-off conditions. These overview figures come from the historical dataset visualization; the interactive explorer uses the versioned, time-corrected reference.", "含间歇熄灯的全部 10 段测试记录。概览图来自历史可视化，交互浏览器使用版本化且已做时间校正的轨迹参考。");
+      ? "All ten training recordings under generally good lighting. These overview figures come from the historical dataset visualization; the interactive explorer uses the versioned, time-corrected reference."
+      : "All ten testing recordings with intermittent light-off conditions. These overview figures come from the historical dataset visualization; the interactive explorer uses the versioned, time-corrected reference.";
   }
-  function localize() {
-    document.documentElement.lang = state.language === "zh" ? "zh-CN" : "en";
-    document.querySelectorAll("[data-en][data-zh]").forEach(element => { element.innerHTML = element.dataset[state.language]; });
-    $("language").textContent = state.language === "en" ? "中文 ↗" : "EN ↗";
-    $("language").setAttribute("aria-label", t("Switch to Chinese", "切换为英文"));
-    $("sequence-search").placeholder = t("Find a sequence…", "查找序列…");
-    $("sequence-search").setAttribute("aria-label", t("Find a sequence", "查找序列"));
-    $("trajectory").setAttribute("aria-label", t("Recorded 3D trajectory. Drag or use arrow keys to rotate; scroll or press plus and minus to zoom.", "真实三维轨迹。拖拽或使用方向键旋转，滚动或使用加减键缩放。"));
-    overviewCaption();
-    if (state.sequences.length) renderList();
-    updateDetails();
-    drawAll();
-  }
-  $("language").addEventListener("click", () => {
-    state.language = state.language === "en" ? "zh" : "en";
-    try { localStorage.setItem("plato-language", state.language); } catch (_) {}
-    localize();
-  });
-  try { if (localStorage.getItem("plato-language") === "zh") state.language = "zh"; } catch (_) {}
+  
+  
+  
   function renderList() {
     const matches = state.sequences.filter(sequence => (state.filter === "all" || sequence.split === state.filter) && sequence.name.toLowerCase().includes(state.query));
     const list = $("sequence-list"); list.replaceChildren();
     if (!matches.length) {
-      const message = document.createElement("p"); message.className = "loading-message"; message.textContent = t("No matching recordings.", "没有匹配的序列。"); list.append(message); return;
+      const message = document.createElement("p"); message.className = "loading-message"; message.textContent = "No matching recordings."; list.append(message); return;
     }
     for (const sequence of matches) {
       const button = document.createElement("button"); button.className = "sequence-item"; button.type = "button";
       button.setAttribute("aria-pressed", String(sequence === state.current));
-      button.setAttribute("aria-label", sequence.name + ", " + sequence.duration.toFixed(1) + t(" seconds", " 秒") + (!sequence.eligible ? t(", calibration flagged", "，标定被标记") : ""));
+      button.setAttribute("aria-label", sequence.name + ", " + sequence.duration.toFixed(1) + " seconds" + (!sequence.eligible ? ", calibration flagged" : ""));
       const name = document.createElement("span"); name.textContent = sequence.name;
-      if (!sequence.eligible) { const flag = document.createElement("small"); flag.title = t("Excluded from default reference evaluation", "不参与默认参考评估"); name.append(flag); }
+      if (!sequence.eligible) { const flag = document.createElement("small"); flag.title = "Excluded from default reference evaluation"; name.append(flag); }
       const duration = document.createElement("span"); duration.textContent = sequence.duration.toFixed(1) + " s";
       button.append(name, duration); button.addEventListener("click", () => selectSequence(sequence)); list.append(button);
     }
@@ -59,20 +53,20 @@
   function updateDetails() {
     const sequence = state.current; if (!sequence) return;
     $("duration").textContent = sequence.duration.toFixed(1) + " s";
-    $("imu-count").textContent = sequence.imuCount.toLocaleString(state.language === "zh" ? "zh-CN" : "en-US");
+    $("imu-count").textContent = sequence.imuCount.toLocaleString("en-US");
     $("off-time").textContent = sequence.offTime.toFixed(2) + " s";
     $("raw-size").textContent = (sequence.rawBytes / 1073741824).toFixed(2) + " GiB";
     $("quality-note").classList.toggle("flagged", !sequence.eligible);
     $("quality-note").textContent = sequence.eligible
-      ? t("Mocap-derived reference · quality masks applied · ", "动作捕捉推导参考 · 已应用质量掩码 · ") + (100 * sequence.validRows / sequence.gtRows).toFixed(1) + t("% valid reference rows. The preview uses sampled sensor values.", "% 有效参考行。传感器曲线为采样预览。")
-      : t("Calibration flagged: excluded from default reference evaluation. Raw sensors remain available; the trajectory is shown for exploratory inspection.", "标定被标记：不参与默认参考评估。原始传感器数据仍保留，轨迹仅用于探索性查看。");
+      ? "Mocap-derived reference · quality masks applied · " + (100 * sequence.validRows / sequence.gtRows).toFixed(1) + "% valid reference rows. The preview uses sampled sensor values."
+      : "Calibration flagged: excluded from default reference evaluation. Raw sensors remain available; the trajectory is shown for exploratory inspection.";
     updateTime();
   }
   function updateTime() {
     if (!state.current) return;
     $("time-label").textContent = state.time.toFixed(1) + " / " + state.current.duration.toFixed(1) + " s";
     $("play").textContent = state.playing ? "Ⅱ" : "▶";
-    $("play").setAttribute("aria-label", state.playing ? t("Pause recording", "暂停播放") : t("Play recording", "播放序列"));
+    $("play").setAttribute("aria-label", state.playing ? "Pause recording" : "Play recording");
   }
   function pause() { state.playing = false; updateTime(); }
   $("play").addEventListener("click", () => {
@@ -127,7 +121,7 @@
     const s = surface(trajectory); if (!s || !state.current) return;
     const { ctx, width, height } = s, sequence = state.current;
     const allPoints = sequence.segments.flatMap(segment => segment.points);
-    if (!allPoints.length) { ctx.fillStyle = "#718079"; ctx.font = "12px Arial"; ctx.fillText(t("No valid trajectory reference", "没有有效轨迹参考"), 20, height / 2); return; }
+    if (!allPoints.length) { ctx.fillStyle = "#718079"; ctx.font = "12px Inter"; ctx.fillText("No valid trajectory reference", 20, height / 2); return; }
     const lo = [Infinity, Infinity, Infinity], hi = [-Infinity, -Infinity, -Infinity];
     for (const p of allPoints) for (let a = 0; a < 3; a++) { lo[a] = Math.min(lo[a], p[a + 1]); hi[a] = Math.max(hi[a], p[a + 1]); }
     const center = lo.map((v, a) => (v + hi[a]) / 2);
@@ -150,13 +144,13 @@
         const first = gridCenter.slice(), second = gridCenter.slice();
         first[gridAxes[a]] += k * extent / 6; second[gridAxes[a]] += k * extent / 6;
         first[gridAxes[1 - a]] -= extent / 2; second[gridAxes[1 - a]] += extent / 2;
-        line(project(first), project(second), "#e0e9df", .7);
+        line(project(first), project(second), "#deedf0", .7);
       }
     }
     for (const segment of sequence.segments) {
       for (let i = 1; i < segment.points.length; i++) {
         const a = segment.points[i - 1], b = segment.points[i];
-        line(project(a.slice(1, 4)), project(b.slice(1, 4)), "#cfddd0", 1.1);
+        line(project(a.slice(1, 4)), project(b.slice(1, 4)), "#cce1e7", 1.1);
       }
     }
     let marker = null;
@@ -167,7 +161,7 @@
         if (a[0] > state.time) break;
         const fraction = b[0] <= state.time ? 1 : Math.max(0, (state.time - a[0]) / (b[0] - a[0]));
         const xyz = a.slice(1, 4).map((v, axis) => v + fraction * (b[axis + 1] - v));
-        line(project(a.slice(1, 4)), project(xyz), b[4] ? "#cd8b46" : "#238f7c", 2.5);
+        line(project(a.slice(1, 4)), project(xyz), b[4] ? "#cd8b46" : "#16899a", 2.5);
         if (state.time >= a[0] && state.time <= b[0]) marker = project(xyz);
       }
       const last = points.at(-1); if (last && Math.abs(last[0] - state.time) < .015) marker = project(last.slice(1, 4));
@@ -175,10 +169,10 @@
     const origin = [lo[0] - extent * .22, lo[1] - extent * .22, lo[2] - extent * .1];
     const axes = state.view === "yz" ? [1, 2] : state.view === "xy" ? [0, 1] : [0, 1, 2];
     const axisColors = ["#8eaaa1", "#7ca0a2", "#a8ac80"];
-    ctx.font = "9px Arial";
+    ctx.font = "9px Inter";
     for (const axis of axes) { const end = origin.slice(); end[axis] += extent * .2; const p = project(end); line(project(origin), p, axisColors[axis], 1.1); ctx.fillStyle = "#7b8e7d"; ctx.fillText(["x", "y", "z"][axis] + " (m)", p[0] + 4, p[1] - 4); }
-    if (marker) { ctx.beginPath(); ctx.arc(marker[0], marker[1], 6, 0, 2 * Math.PI); ctx.fillStyle = "#dcebd9"; ctx.fill(); ctx.beginPath(); ctx.arc(marker[0], marker[1], 3.4, 0, 2 * Math.PI); ctx.fillStyle = "#092e31"; ctx.fill(); }
-    else if (state.time < sequence.duration - .1) { ctx.fillStyle = "#8a968c"; ctx.font = "9px Arial"; ctx.fillText(t("No valid reference at this time", "此时没有有效参考轨迹"), 14, 38); }
+    if (marker) { ctx.beginPath(); ctx.arc(marker[0], marker[1], 6, 0, 2 * Math.PI); ctx.fillStyle = "#dcf2f5"; ctx.fill(); ctx.beginPath(); ctx.arc(marker[0], marker[1], 3.4, 0, 2 * Math.PI); ctx.fillStyle = "#0a3e4d"; ctx.fill(); }
+    else if (state.time < sequence.duration - .1) { ctx.fillStyle = "#8a968c"; ctx.font = "9px Inter"; ctx.fillText("No valid reference at this time", 14, 38); }
   }
   function chart(canvas, points, color, label, threshold) {
     const s = surface(canvas); if (!s || !state.current) return;
@@ -189,8 +183,8 @@
     const x = value => left + value / sequence.duration * w;
     const y = value => top + h - (value - minimum) / (maximum - minimum) * h;
     for (const interval of sequence.offIntervals) { ctx.fillStyle = "#f5e7d6"; ctx.fillRect(x(interval[0]), top, x(interval[1]) - x(interval[0]), h); }
-    ctx.font = "8px Arial"; ctx.fillStyle = "#869289";
-    for (let i = 0; i <= 2; i++) { const value = maximum * i / 2; ctx.beginPath(); ctx.moveTo(left, y(value)); ctx.lineTo(width - right, y(value)); ctx.strokeStyle = "#e1e8df"; ctx.lineWidth = .7; ctx.stroke(); ctx.textAlign = "right"; ctx.fillText(value >= 10 ? value.toFixed(0) : value.toFixed(1), left - 5, y(value) + 3); }
+    ctx.font = "8px Inter"; ctx.fillStyle = "#869289";
+    for (let i = 0; i <= 2; i++) { const value = maximum * i / 2; ctx.beginPath(); ctx.moveTo(left, y(value)); ctx.lineTo(width - right, y(value)); ctx.strokeStyle = "#dceaf0"; ctx.lineWidth = .7; ctx.stroke(); ctx.textAlign = "right"; ctx.fillText(value >= 10 ? value.toFixed(0) : value.toFixed(1), left - 5, y(value) + 3); }
     if (threshold) { ctx.setLineDash([3, 3]); ctx.beginPath(); ctx.moveTo(left, y(threshold)); ctx.lineTo(width - right, y(threshold)); ctx.strokeStyle = "#d99950"; ctx.stroke(); ctx.setLineDash([]); }
     ctx.save(); ctx.beginPath(); ctx.rect(left, top, w, h); ctx.clip();
     ctx.beginPath(); points.forEach((p, index) => { if (index === 0) ctx.moveTo(x(p[0]), y(p[1])); else ctx.lineTo(x(p[0]), y(p[1])); });
@@ -202,8 +196,8 @@
   function drawCharts() {
     if (!state.current) return;
     chart($("brightness"), state.current.brightness, "#72978a", "", 5);
-    chart($("imu-signal"), state.current.imuTrace.map(p => [p[0], p[state.signal === "acc" ? 1 : 2]]), "#238f7c", state.signal === "acc" ? "m/s²" : "rad/s");
-    $("imu-signal").setAttribute("aria-label", state.signal === "acc" ? t("Actual sampled acceleration norm over time, in meters per second squared", "真实加速度模长采样，单位米每二次方秒") : t("Actual sampled angular velocity norm over time, in radians per second", "真实角速度模长采样，单位弧度每秒"));
+    chart($("imu-signal"), state.current.imuTrace.map(p => [p[0], p[state.signal === "acc" ? 1 : 2]]), "#16899a", state.signal === "acc" ? "m/s²" : "rad/s");
+    $("imu-signal").setAttribute("aria-label", state.signal === "acc" ? "Actual sampled acceleration norm over time, in meters per second squared" : "Actual sampled angular velocity norm over time, in radians per second");
   }
   function drawAll() { drawTrajectory(); drawCharts(); }
   if ("ResizeObserver" in window) { const observer = new ResizeObserver(() => drawAll()); for (const id of ["trajectory", "brightness", "imu-signal"]) observer.observe($(id)); }
@@ -211,7 +205,7 @@
   document.querySelectorAll("[data-overview]").forEach(button => button.addEventListener("click", () => {
     state.overview = button.dataset.overview; setPressed("[data-overview]", "overview", state.overview);
     $("overview-image").src = "assets/" + state.overview + "-overview.webp";
-    $("overview-image").alt = t("Overview of all 10 ", "全部 10 段") + (state.overview === "train" ? t("training trajectories", "训练轨迹") : t("testing trajectories with light-off intervals", "含熄灯区间的测试轨迹"));
+    $("overview-image").alt = "Overview of all 10 " + (state.overview === "train" ? "training trajectories" : "testing trajectories with light-off intervals");
     overviewCaption();
   }));
   document.querySelectorAll("[data-figure]").forEach(button => button.addEventListener("click", () => {
@@ -219,13 +213,13 @@
   }));
   $("close-figure").addEventListener("click", () => $("figure-dialog").close());
   $("figure-dialog").addEventListener("click", event => { if (event.target === $("figure-dialog")) { const r = $("figure-dialog").getBoundingClientRect(); if (event.clientX < r.left || event.clientX > r.right || event.clientY < r.top || event.clientY > r.bottom) $("figure-dialog").close(); } });
-  localize();
+  overviewCaption(); renderEquations(); if (document.fonts) document.fonts.ready.then(drawAll);
   fetch("data/sequences.json").then(response => { if (!response.ok) throw new Error("Data unavailable"); return response.json(); }).then(data => {
     if (!Array.isArray(data.sequences) || data.sequences.length !== 20) throw new Error("Incomplete dataset inventory");
     state.sequences = data.sequences;
     $("explorer").setAttribute("aria-busy", "false");
     selectSequence(state.sequences.find(sequence => sequence.name === "Test_001") || state.sequences[0]);
   }).catch(() => {
-    $("explorer").setAttribute("aria-busy", "false"); const message = document.createElement("p"); message.className = "error-message"; message.textContent = t("The recording preview could not load. Reload the page or use the dataset download and static figures below.", "序列预览加载失败。请刷新页面，或使用下方的数据下载与静态图。"); $("sequence-list").replaceChildren(message);
+    $("explorer").setAttribute("aria-busy", "false"); const message = document.createElement("p"); message.className = "error-message"; message.textContent = "The recording preview could not load. Reload the page or use the dataset download and static figures below."; $("sequence-list").replaceChildren(message);
   });
 })();

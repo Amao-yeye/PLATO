@@ -643,7 +643,8 @@
   ],
   "distribution": {
     "kind": "data_only_preview",
-    "raw_recordings": "Separate per-sequence .bag.gz release assets; decompress into raw/",
-    "algorithm_and_processing_code_included": false
+    "raw_recordings": "Separate per-sequence .bag.gz files on Hugging Face; decompress into raw/",
+    "algorithm_and_processing_code_included": false,
+    "repository": "https://huggingface.co/datasets/Amao666/AquaLux"
   }
 }
