@@ -2,7 +2,7 @@
 (() => {
   const $ = id => document.getElementById(id);
   const state = { sequences: [], current: null, filter: "all", query: "", view: "3d", signal: "acc", yaw: .72, pitch: .52, zoom: 1, time: 0, playing: false, lastTick: 0, overview: "train" };
-  
+
   const setPressed = (selector, key, value) => document.querySelectorAll(selector).forEach(button => button.setAttribute("aria-pressed", String(button.dataset[key] === value)));
   function renderEquations() {
     if (!window.katex) return;
@@ -19,9 +19,9 @@
       ? "All ten training recordings under generally good lighting. These overview figures come from the historical dataset visualization; the interactive explorer uses the versioned, time-corrected reference."
       : "All ten testing recordings with intermittent light-off conditions. These overview figures come from the historical dataset visualization; the interactive explorer uses the versioned, time-corrected reference.";
   }
-  
-  
-  
+
+
+
   function renderList() {
     const matches = state.sequences.filter(sequence => (state.filter === "all" || sequence.split === state.filter) && sequence.name.toLowerCase().includes(state.query));
     const list = $("sequence-list"); list.replaceChildren();
